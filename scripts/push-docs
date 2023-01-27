@@ -16,5 +16,6 @@ git reset origin/gh-pages || true
 
 git add -A .
 if git commit -m "Build documentation for ${version} at ${rev}"; then
+  echo "Pushing to $(git remote -v)"
   git push -q origin HEAD:refs/heads/gh-pages
 fi
