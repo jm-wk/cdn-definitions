@@ -268,8 +268,14 @@
         "override_initial_rhel_release": {
             "$ref": "#/definitions/major_to_release_version_mapping"
         },
+        "populate_ubi_dot_repos": {
+            "type": "boolean"
+        },
         "release_stream_mappings": {
             "$ref": "#/definitions/release_stream_mapping"
+        },
+        "releasever_alias": {
+            "$ref": "#/definitions/path_alias_list"
         },
         "rhel_open_dist": {
             "$ref": "#/definitions/major_version_list"
@@ -294,21 +300,5 @@
             "type": "string"
         }
     },
-    "requiredProperties": [
-        "version",
-        "rhui_alias",
-        "origin_alias",
-        "symlink_exceptions",
-        "release_stream_mappings",
-        "env_to_releasever_mappings",
-        "cfme_version_mappings",
-        "tps_variant_mappings",
-        "filter_arch_from_releases",
-        "override_initial_rhel_release",
-        "signing_keys_mappings",
-        "rhui_product_id",
-        "ignore_lp_version_product_ids",
-        "exclude_from_listings"
-    ],
     "type": "object"
 }

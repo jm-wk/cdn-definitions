@@ -222,6 +222,9 @@ properties:
   origin_alias:
     $ref: "#/definitions/path_alias_list"
 
+  releasever_alias:
+    $ref: "#/definitions/path_alias_list"
+
   symlink_exceptions:
     $ref: "#/definitions/symlink_exception_list"
 
@@ -258,20 +261,7 @@ properties:
   exclude_from_listings:
     $ref: "#/definitions/exclude_versions_from_listings"
 
-requiredProperties:
-- version
-- rhui_alias
-- origin_alias
-- symlink_exceptions
-- release_stream_mappings
-- env_to_releasever_mappings
-- cfme_version_mappings
-- tps_variant_mappings
-- filter_arch_from_releases
-- override_initial_rhel_release
-- signing_keys_mappings
-- rhui_product_id
-- ignore_lp_version_product_ids
-- exclude_from_listings
+  populate_ubi_dot_repos:
+    type: boolean
 
 additionalProperties: false
