@@ -8,6 +8,9 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -25,7 +28,7 @@ jobs:
         # https://github.com/marketplace/actions/deploy-github-pages-site
       - name: Upload docs to GitHub Pages
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: scripts/push-docs
 
 
