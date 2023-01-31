@@ -1,7 +1,7 @@
 name: Deploy to PyPI
 
 on:
-  push: 
+  push:
     tags:
       - v*
 
@@ -22,3 +22,4 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           password: ${{ secrets.PYPI_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
